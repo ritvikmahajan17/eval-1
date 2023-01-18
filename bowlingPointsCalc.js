@@ -38,6 +38,23 @@ const score = rolls => {
 
 }
 
+const bestScore = allRolls => {
+
+    const bestGame = allRolls.reduce((acc, game)=> {
+        const oneGameScore = score(game);
+        acc = Math.max(oneGameScore,acc);
+
+        return acc;
+    }, 0)
+
+    return bestGame;
+
+}
+
 console.log(score([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]))
 console.log(score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]))
 console.log(score([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+
+const allGames = [ [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6], 
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+console.log(bestScore(allGames))
