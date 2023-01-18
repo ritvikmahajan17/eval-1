@@ -1,5 +1,9 @@
 const score = rolls => {
 
+    if(rolls.length==0){
+        return 'no game played';
+    }
+
     let curr = 0;
     let points = 0;
 
@@ -58,3 +62,5 @@ console.log(score([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 const allGames = [ [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6], 
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 console.log(bestScore(allGames))
+
+module.exports = {score,bestScore}
