@@ -1,0 +1,23 @@
+{
+  "name": "eval-1",
+  "version": "1.0.0",
+  "description": "This repo is for eval 1",
+  "main": "bowlingPointsCalc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritvikmahajan17/eval-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritvikmahajan17/eval-1/issues"
+  },
+  "homepage": "https://github.com/ritvikmahajan17/eval-1#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "jest": "^29.3.1"
+  }
+}

@@ -1,7 +1,7 @@
 const score = rolls => {
 
     if(rolls.length==0){
-        return 'no game played';
+        return "no game played";
     }
 
     let curr = 0;
@@ -40,7 +40,7 @@ const score = rolls => {
 
     return points;
 
-}
+};
 
 const bestScore = allRolls => {
 
@@ -49,18 +49,19 @@ const bestScore = allRolls => {
         acc = Math.max(oneGameScore,acc);
 
         return acc;
-    }, 0)
+    }, 0);
 
     return bestGame;
 
-}
+};
 
-console.log(score([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]))
-console.log(score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]))
-console.log(score([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+console.log(score([3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6]));
+console.log(score([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]));
+console.log(score([6,4,6,2]));
 
 const allGames = [ [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6], 
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-console.log(bestScore(allGames))
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10],[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+console.log(bestScore(allGames));
 
-module.exports = {score,bestScore}
+
+module.exports = {score,bestScore};
